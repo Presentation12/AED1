@@ -1,0 +1,45 @@
+Algoritmo "Menu"
+/*
+autor: Gonçalo Cunha , João Apresentação  e Carlos Barbosa
+data: ---
+funcionalidade: fazer um questionario a um numero indeterminado de alunos e imprimir
+o numero de entrevistados, percentagem de alunos do genero masculino e feminino entrevistados e 
+quantidade de alunos masculino,<20 anos e que nao gosta do curso
+*/
+
+var
+	idade, GostaOuNao, contadorAlunos <- 0, contadorM <- 0, contadorF <- 0, contadorRestrito <- 0: inteiro
+	genero: caracter
+inicio
+    escrever("[0]-Exibir Dados\nIdade: ")
+    ler(idade)
+
+	enquanto(idade > 0) fazer
+		escrever("Genero(M/F): ")
+		ler(genero)
+		escrever("Esta a gostar ou nao do curso que esta a frequentar?\n[0]-Nao\n[1]-Sim")
+		ler(GostaOuNao)
+	
+        se(genero = 'M' ou genero = 'm') entao
+            se (idade < 20 e GostaOuNao = 0) entao
+                contadorRestrito <- contadorRestrito + 1
+            fim-se
+            contadorM <- contadorM + 1
+        senao se(genero = 'F' ou genero = 'f') entao
+            contadorF <- contadorF + 1 
+	    fim-se
+
+	    contadorAlunos <- contadorAlunos + 1
+        escrever("[0]-Exibir Dados\nIdade: ")
+        ler(idade)
+	fim-enquanto
+	
+    se (contadorAlunos = 0) entao
+        escrever(contadorAlunos)
+    senao entao
+        escrever(contadorAlunos)
+        escrever((float)(contadorM * 100) / (contadorAlunos), (float)(contadorF * 100) / (contadorAlunos))
+        escrever(contadorRestrito)
+    fim-se
+fim	
+

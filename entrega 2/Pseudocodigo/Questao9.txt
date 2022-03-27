@@ -1,0 +1,30 @@
+Algoritmo "Capicua"
+/*
+autor: Gonçalo Cunha , João Apresentação  e Carlos Barbosa
+data: ---
+funcionalidade: encontra o maio número palíndromo resultante do produto entre
+dois números de três dígitos
+*/
+
+var
+    original, inverso = 0, temp, capicuaMaior = 0, aux, n1, n2: inteiro
+inicio
+    para n1 <- 100 ate 999 fazer
+        para n2 <- 100 ate 999 fazer
+            original <- n1 * n2
+            aux <- original
+            inverso <- 0
+            enquanto aux != 0 fazer
+                temp <- aux % 10
+                inverso <- (inverso * 10) + temp
+                aux <- aux / 10
+            fim-enquanto
+            se original = inverso entao
+                se original > capicuaMaior entao
+                    capicuaMaior <- original
+                fim-se
+            fim-se
+        fim-para-fazer
+    fim-para-fazer
+    escrever(capicuaMaior)
+fim

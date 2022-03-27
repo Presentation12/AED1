@@ -1,0 +1,43 @@
+Algoritmo "Desconto"
+/*
+autor: João Apresentação, Gonçalo Cunha e Carlos Barbosa
+data: ---
+funcionalidade: recebe o comprimento do gato e o genero e diz qual o Desconto
+*/
+
+var
+    comprimento: inteiro
+    genero: caracter
+
+Inicio
+
+    escrever("***Dados do Gato***\nGenero(M/F): ")
+    ler(genero)
+    escrever("Comprimento(cm): ")
+    ler(comprimento)
+
+    selecionar genero
+        caso 'F' 
+        caso 'f' 
+            se (comprimento >= 6 e comprimento < 10) entao
+                escrever("Desconto de 10%")
+            senao se (comprimento >= 15 e comprimento < 18) entao
+                escrever("Desconto de 8%")
+            senao se (comprimento >= 18 e comprimento < 25) entao
+                escrever("Desconto de 7%")
+            senao
+                escrever("Desconto de 5%")
+            fimse
+        caso 'M'
+        caso 'm'
+            se (comprimento >= 10 e comprimento < 15) entao
+                escrever("Desconto de 9%")
+            senao se(comprimento >= 18 e comprimento < 25) entao
+                escrever("Desconto de 7%")
+            senao
+                escrever("Desconto de 5%")
+            fimse
+        senao escrever("ERRO!!!")
+    fim-selecionar
+fim
+    

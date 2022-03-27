@@ -1,0 +1,25 @@
+Algoritmo "Quantidade de pessoas com idade entre os 15 aos 48"
+/*
+autor: Gonçalo Cunha , João Apresentação  e Carlos Barbosa
+data: ---
+funcionalidade: recebe uma quantidade indeterminada de idades 
+e aprensenta a quantidade de pessoas com idade dentro do intervalo 15 <= idade < 48
+*/
+
+var
+    idade, contador <- 0: inteiro
+
+inicio
+	escrever("Introduza um numero diferente de 0 para inicializar: ")
+	ler(idade)
+
+	enquanto idade > 0 fazer	
+        se idade >= 15 e idade < 48 entao
+            contador <- contador + 1
+        fim-se
+	    escrever("Se pretender sair introduza um numero menor ou igual a 0)\nIntroduza a idade: \n")
+	    ler(idade)
+    fim-enquanto
+
+	escrever(contador)
+fim

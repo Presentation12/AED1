@@ -1,0 +1,31 @@
+Algortimo "Aprovado ou Reprovado"
+/*
+autor: João Apresentação, Gonçalo Cunha e Carlos Barbosa
+data: ---
+funcionalidade: Receber as notas de um aluno, calcular a media e consoante a media mostrar no ecra se foi Aprovado ou Reprovado
+*/
+
+Var
+    mat, port, ing, geo, media: real
+ 
+Inicio
+    escrever("Indique as notas das seguintes disciplinas(0-20)\nMatematica: ")
+    ler(mat)
+    escrever("Portugues: ")
+    ler(port)
+    escrever("Ingles: ")
+    ler(ing)
+    escrever("Geografia: ")
+    ler(geo)
+     
+    se (mat<0 ou mat>20 ou port<0 ou port>20 ou ing<0 ou ing>20 ou geo<0 ou geo>20) entao
+        escrever("Nota Invalida")
+    senao
+        media <- (mat + port + ing + geo) / 4
+            se (media >= 9.5) entao
+                escrever("Aprovado")
+            senao
+                escrever("Reprovado")
+            Fim-se
+    Fim-se
+Fim

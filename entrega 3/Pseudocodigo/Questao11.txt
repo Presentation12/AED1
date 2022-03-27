@@ -1,0 +1,24 @@
+Algoritmo "Somatório"
+	/*
+	autor: Gonçalo Cunha , João Apresentação  e Carlos Barbosa
+	data: ---
+	funcionalidade: solicita ao utilizador um número natural e
+	mostra ao utilizador o resultado do somatorio entre 1 e n (com sub-rotina).
+	*/
+Variáveis
+	n: inteiro	
+Inicio
+	escrever("Insira o n(natural) do somatorio: ")
+	ler(n)
+	
+	escrever(somatorio(n))
+Fim
+
+Funcao somatorio(n:inteiro):inteiro
+	//Funcionalidade: realiza o soma de todos os valores naturais incluidos ate @n
+Variaveis
+Inicio
+	se n > 0 entao
+		retornar(n + somatorio(n - 1))
+	fim-se
+Fim-Funcao

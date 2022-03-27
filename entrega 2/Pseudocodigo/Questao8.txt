@@ -1,0 +1,23 @@
+Algoritmo "Numeros aleatorios"
+/*
+autor: Gonçalo Cunha , João Apresentação  e Carlos Barbosa
+data: ---
+funcionalidade: um programa capaz de gerar de forma automática e aleatória 70
+números inteiros positivos entre 0 e 100 e apresentar a soma e media dos numeros primos
+*/ 
+
+var 
+	num , somaPrimos = 0, contaPrimos = 0, i: inteiro
+inicio
+	srand(time(NULL))
+
+	para i <- 1 até 70 fazer
+		num <- rand() % 100
+        se num = 2 ou num = 3 ou num = 5 ou num = 7 ou (num % 2 != 0 e num % 3 != 0 e num % 5 != 0 e num % 7 != 0)
+            somaPrimos <- somaPrimos + num
+            contaPrimos <- contaPrimos + 1
+	    fim-se
+	fim-para-fazer
+
+	escrever(somaPrimos, (float)somaPrimos / contaPrimos)
+fim

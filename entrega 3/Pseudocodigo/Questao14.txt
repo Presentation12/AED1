@@ -1,0 +1,50 @@
+Algoritmo "Numeros aleatorios"
+	/*
+	autor: Gonçalo Cunha , João Apresentação  e Carlos Barbosa
+	data: ---
+	funcionalidade: uma função que devolve a quantidade de primos existentes entre
+	dois inteiros (i.e. limiteInferior e limiteSuperior)
+ 	*/ 
+Variaveis
+	limInf, limSup: inteiro
+Inicio
+	escrever("Indique os limites de um intervalo para verificar quantos numeros primos existem:\nLimite inferior(incluido): ")
+	ler(limInf)
+	escrever("Limite superior(incluido): ")
+	ler(limSup)
+	escrever(contaPrimos(limInf, limSup))
+Fim
+
+Funcao verificaPrimos(n:inteiro):booleano
+	//funcionalidade: verificar se @n é primo
+Variaveis
+	resto0: inteiro
+Inicio
+	resto0 <- 0 : inteiro
+
+	se n != 0 entao
+		Para i <- 1 até n fazer
+			Se n % i = 0 entao
+				resto <- resto0 + 1
+			Fim-se
+		fim-para-fazer
+
+		retornar resto0 = 2
+	Fim-se
+Fim-Funcao
+
+Funcao contaPrimos(limInf, limSup:inteiro):inteiro
+	//Funcionalidade: contar o numero de primos existentes entre @limInf e @limSup
+Variaveis
+	n_primos: inteiro
+Inicio
+	n_primos <- 0
+
+	para i <- limInf ate limSup
+		se verficiaPrimos(i) entao
+			n_primos <- n_primos + 1
+		fim-se
+	fim-para-fazer
+	
+	retorna n_primos
+Fim-Funcao

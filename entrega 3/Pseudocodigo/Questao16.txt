@@ -1,0 +1,32 @@
+Algoritmo "Numero de palavras existentes no texto"
+	/*
+	autor: Gonçalo Cunha , João Apresentação  e Carlos Barbosa
+	data: ---
+	funcionalidade: função que recebe um texto e que conta o número de palavras
+	existentes no texto
+ 	*/
+TAM <- 100
+
+Variaveis
+	texto[TAM]: caracter
+Inicio
+	escrever("Escreva o texto: ")
+	ler(texto)
+	escrever(contadorPalavras(texto))
+Fim
+
+Funcao contadorPalavras(*texto:caracter):inteiro
+	//funcionalidade: função que conta o número de palavras existentes no @texto recebido na função main~
+Variaveis
+	contadorPalavras: inteiro
+Inicio
+	contaPalavras <- 1
+
+	enquanto *texto != '\0' fazer
+		se *texto = ' ' entao
+			contaPalavras <- contaPalavras + 1
+		Fim-se
+		texto <- texto + 1	
+	fim-Enquanto
+	retorna contaPalavras 
+Fim-Funcao

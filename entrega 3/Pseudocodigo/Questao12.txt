@@ -1,0 +1,37 @@
+Algoritmo "Capicua"
+	/*
+	autor: Gonçalo Cunha , João Apresentação  e Carlos Barbosa
+	data: ---
+	funcionalidade: encontra um numero com uma função que calcula o valor do inverso do numero submetido e verifica se são iguais; se iguais sao palindromos
+	*/
+Variáveis
+	n: inteiro	
+Inicio
+	escrever("Indique um numero para verificar se e palindromo: ")
+	ler(n)
+	 
+	se palindromo(n) = true entao
+        escrever("Palindromo")
+    senao
+        escrever("Nao e palindromo")
+    fim-se
+Fim
+
+Funcao palindromo(original:inteiro):caracter
+	//Funcionalidade: verifica se o inverso é igual ao @original
+Variaveis
+	temp, aux, invero: inteiro
+Inicio
+	aux <- original
+	inverso <- 0
+	
+	enquanto aux != 0 fazer
+		temp <- aux % 10
+		inverso <- (inverso * 10) + temp
+        aux <- aux / 10
+	fim-enquanto
+
+	se original = inverso entao
+		retornar true
+	fim-se
+Fim-Funcao

@@ -1,0 +1,47 @@
+Algoritmo "Media e Soma de primos"
+	/*
+	autor: Gonçalo Cunha , João Apresentação  e Carlos Barbosa
+	data: ---
+	funcionalidade: um programa capaz de gerar de forma automática e aleatória 70
+	números inteiros positivos entre 0 e 100 e apresentar a soma e media dos numeros primos
+	*/ 
+Variaveis
+	num , somaPrimos, contaPrimos: inteiro
+Inicio
+	somaPrimos <- 0
+	contaPrimos <- 0
+
+	para i <- 1 até 70 fazer
+		num <- rand() % 100
+
+        se verificaPrimos(num) entao
+            somaPrimos <- somaPrimos + num
+            contaPrimos <- contaPrimos + 1
+	    fim-se
+	fim-para-fazer
+
+	se contaPrimos > 0 entao
+		escrever(somaPrimos, (float)somaPrimos / contaPrimos)
+		escrever(somaPrimos, (float)somaPrimos / contaPrimos)
+	Senao
+		escrever(0; 0)
+	Fim-se
+fim
+
+Funcao verificaPrimos(n:inteiro):booleano
+	//funcionalidade: verificar se @n é primo
+Variaveis
+	resto0: inteiro
+Inicio
+	resto0 <- 0 : inteiro
+
+	se n != 0 entao
+		Para i <- 1 até n fazer
+			Se n % i = 0 entao
+				resto <- resto0 + 1
+			Fim-se
+		fim-para-fazer
+
+		retornar resto0 = 2
+	Fim-se
+Fim-Funcao

@@ -1,0 +1,54 @@
+
+Algoritmo "Entregas ao domicílio"
+/*
+autor: João Apresentação, Gonçalo Cunha e Carlos Barbosa
+data: ---
+funcionalidade: Calcula a média de entregas diárias pelos paquetes e 
+realiza a soma das entregas dos paquetes que fizeram mais que quatro entregas nesse dia
+*\
+
+Var
+    n_entregas <- 0, somaM4 <- 0, temp: inteiro
+    media: real
+
+Inicio
+
+    escrever("Paquete 1: ")
+    ler(temp)
+        se temp > 4 entao 
+            somaM4 <- somaM4 + temp
+        fim-se
+    n_entregas <- n_entregas + temp
+
+    escrever("Paquete 2: ")
+    ler(temp)
+        se temp > 4 entao 
+            somaM4 <- somaM4 + temp
+        fim-se
+    n_entregas <- n_entregas + temp
+
+    escrever("Paquete 3: ")
+    ler(temp)
+        se temp > 4 entao 
+            somaM4 <- somaM4 + temp
+        fim-se
+    n_entregas <- n_entregas + temp
+
+    escrever("Paquete 4: ")
+    ler(temp)
+        se temp > 4 entao 
+            somaM4 <- somaM4 + temp
+        fim-se
+    n_entregas <- n_entregas + temp
+
+    escrever("Paquete 5: ")
+    ler(temp)
+        se temp > 4 entao 
+            somaM4 <- somaM4 + temp
+        fim-se
+    n_entregas <- n_entregas + temp
+
+    media <- n_entregas / 5
+    escrever("Soma das entregas(>4): \nMedia de entregas(no dia): ", somaM4, media)
+fim
+

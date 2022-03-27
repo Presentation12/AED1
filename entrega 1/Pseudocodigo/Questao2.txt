@@ -1,0 +1,20 @@
+Algoritmo "bissexto"
+/*
+autor: João Apresentação, Gonçalo Cunha e Carlos Barbosa
+data: ---
+funcionalidade: o utilizador vai indicar um ano e vai receber se é ano bissexto ou não
+*/
+
+Var
+    ano: inteiro
+ 
+Inicio
+    escrever("Indique um ano que pretenda saber se é ou não bissexto: ");
+    ler(ano)
+     
+    se ((ano % 4 = 0 e ano % 100 != 0) ou (ano % 400 = 0)) entao
+        escrever(" é ano bissexto", ano)
+    senao
+        escrever(" não é ano bissexto", ano)
+    Fim-se
+Fim

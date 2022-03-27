@@ -1,0 +1,27 @@
+Algoritmo "Remover os espaços existentes no texto"
+	/*
+	autor: Gonçalo Cunha , João Apresentação  e Carlos Barbosa
+	data: ---
+	funcionalidade: procedimento que recebe um texto e que lhe retira todos os espaços em branco
+ 	*/
+TAM <- 100
+
+Variaveis
+	original[TAM], semEspaco[TAM]: caracter
+inicio
+    escrever("Escreva o texto: ")
+    ler(original)
+    apagaEspacos(original, semEspaco)
+    escrever(semEspaco)
+fim
+
+Procedimento contadorPalavras(*original, *semEspaco: caracter)
+	enquanto *original != '\0' fazer
+		se *original = ' ' entao
+			*semEspaco <- *original
+			semEspaco <- semEspaco + 1
+		Fim-se
+		original <- original+ 1	
+	fim-Enquanto
+	*semEspaco <- '\0'
+Fim-Procedimento

@@ -1,0 +1,35 @@
+Algoritmo "Numero de ocorrencias de um caracter"
+	/*
+	autor: Gonçalo Cunha , João Apresentação  e Carlos Barbosa
+	data: ---
+	funcionalidade: função que recebe um texto e que devolve o número de
+	ocorrências de um determinado caracter no texto
+ 	*/
+TAM <- 100
+
+Variaveis 
+	texto[TAM], n : caracter
+Inicio
+	escrever("Escreva o texto: ")
+	ler(texto)
+	escrever("Indique a letra que pretende saber o numero de ocorrencias no texto: ")
+	ler(n)
+	escrever("Aparece n vezes", n, contadorLetras(texto, n)))
+Fim
+
+Funcao contadorLetras(*texto, n : caracter) : inteiro
+	//funcionalidade: função que conta o numero de ocorrencias de @n em @texto
+Variaveis
+	contadorLetras: inteiro
+Inicio
+	contaLetras <- 0
+
+	enquanto *texto != '\0' fazer
+		se *texto = n entao
+			contaLetras <- contaLetras + 1
+		fim-se
+		texto <- texto + 1
+	fim-Enquanto
+
+	retornar contaLetras
+Fim-Funcao
